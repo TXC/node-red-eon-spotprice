@@ -1,0 +1,55 @@
+name: Release
+
+# semantic-release decides from the commit messages whether to release, picks
+# the version, tags it, publishes to npm and creates the GitHub release.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: ./.github/workflows/pull_request.yml
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the release commit and tag, create the release
+      issues: write # comment on issues fixed by the release
+      pull-requests: write # comment on pull requests in the release
+      id-token: write # npm trusted publishing and provenance
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # semantic-release needs the full history and tags
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      - run: pnpm exec semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Only needed until npm trusted publishing is set up for the package.
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # semantic-release tags the commit it releases; no tag means no release.
+      - name: Check for a new release
+        id: release
+        run: echo "tag=$(git tag --points-at HEAD 'v*')" >> "$GITHUB_OUTPUT"
+
+      - name: Update Node-RED flow library
+        if: steps.release.outputs.tag != ''
+        uses: BigThunderSR/update-package-node-red-flow-library-action@v1.3.23
+        continue-on-error: true
+        with:
+          package-name: node-red-contrib-eon-spotprice

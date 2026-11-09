@@ -1,0 +1,62 @@
+<script type="text/html" data-help-name="eon-spotprice">
+    <p>A Node-Red Node for collecting `day ahead` prices from Nord Pool Group.</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>area
+            <span class="property-type">String</span>
+        </dt>
+        <dd>
+            If set in msg, will accept the area as a string, else the node's settings is used. Possible areas can be found at <a href="https://data.nordpoolgroup.com/map" target="_blank">nordpoolgroup map</a>
+            Or the main site <a href="https://www.nordpoolgroup.com/" target="_blank">www.nordpoolgroup.com</a>.
+        </dd>
+        <dt>date
+            <span class="property-type">date</span>
+        </dt>
+        <dd>
+            Accepts any value parsable with javascript <code>new date()</code>.
+            <p>If not defined in input todays date will be used. If you request tomorrows data before 14:42 theres risk that data is not available yet and you will get the data from the current date. See <a href="https://github.com/samuelmr/nordpool-node/issues/1#issuecomment-316583765" target="_blank">API issue#1</a>.</p>
+        </dd>
+    </dl>
+    <h3>Output</h3>
+    <p>Returns an array with 192 objects.</p>
+    <dl class="message-properties">
+        <dt>dateTime
+            <span class="property-type">dateTime</span>
+        </dt>
+        <dd>
+            UTC timestamp when the price starts to take effect.
+            <p><i>A timestamp of 04:00 means this price is valid from 04:00:00 to 04:14:59</i></p>
+        </dd>
+        <dt>value
+            <span class="property-type">Number</span>
+        </dt>
+        <dd>
+            The price pr. kWh and without local taxes.
+        </dd>
+        <dt>valueInclVat
+            <span class="property-type">Number</span>
+        </dt>
+        <dd>
+            The price pr. kWh and including local taxes.
+        </dd>
+        <dt>definitive
+            <span class="property-type">Boolean</span>
+        </dt>
+        <dd>
+            Indicates if the price is definitive or subject to change.
+        </dd>
+        <dt>padded
+            <span class="property-type">Boolean</span>
+        </dt>
+        <dd>
+            Indicates if the price has been padded to fill missing data.
+        </dd>
+        <dt>area
+            <span class="property-type">String</span>
+        </dt>
+        <dd>
+            The area the returned price applies to.
+        </dd>
+    </dl>
+
+</script>

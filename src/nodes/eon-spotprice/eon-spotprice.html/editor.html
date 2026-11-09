@@ -1,0 +1,28 @@
+<script type="text/html" data-template-name="eon-spotprice">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-area"><i class="fa fa-globe"></i> Area</label>
+        <select value="" id="node-input-area">
+            <option value="SE1">SE1</option>
+            <option value="SE2">SE2</option>
+            <option value="SE3">SE3</option>
+            <option value="SE4">SE4</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <div class="form-tips">
+            <p>Find your area code at <a href="https://data.nordpoolgroup.com/map" target="_blank">nordpoolgroup.com/map</a></p>
+        </div>
+    </div>
+    <div class="form-row">
+        <label for="node-input-action"><i class=""></i> Action on input</label>
+        <select value="" id="node-input-action">
+            <option value="todayOrOverride">Price for today. Override with msg.date</option>
+            <option value="dayAhead">Price for tomorrow (notice limitations in help menu)</option>
+            <option value="rolling">Price for yesterday, today and, if possible, tomorrow</option>
+        </select>
+    </div>
+</script>
