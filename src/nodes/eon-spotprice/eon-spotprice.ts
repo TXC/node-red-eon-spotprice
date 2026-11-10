@@ -1,5 +1,5 @@
-import { NodeInitializer } from 'node-red';
-import {EonSpotpriceNode, EonSpotpriceNodeDef} from './modules/types';
+import type { NodeInitializer } from 'node-red';
+import type {EonSpotpriceNode, EonSpotpriceNodeDef} from './modules/types';
 import {getOpts} from './modules/get-opts';
 import {prices} from './modules/prices';
 

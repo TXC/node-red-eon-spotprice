@@ -1,5 +1,5 @@
 import type {EonSpotpriceNodeDef} from './types';
-import {EonSpotpriceArea, EonSpotpriceRequestOpts} from '../shared/types';
+import type {EonSpotpriceArea, EonSpotpriceRequestOpts} from '../shared/types';
 
 // Simple type guard with typeof
 export const areaCheck = (value: unknown): EonSpotpriceArea => {

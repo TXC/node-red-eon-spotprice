@@ -1,4 +1,4 @@
-import {EonSpotpriceNode} from './types';
+import type {EonSpotpriceNode} from './types';
 import type {
   EonSpotpriceRequestOpts,
   EonSpotpriceApiResponse,

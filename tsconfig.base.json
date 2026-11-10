@@ -9,7 +9,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "removeComments": true,
-    "noEmit": false,
+    "noEmit": true,
     "importHelpers": false,
     "preserveWatchOutput": true,
     "checkJs": false,

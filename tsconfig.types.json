@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    //"moduleResolution": "node",
+    //"esModuleInterop": true,
+  },
+  //"include": ["src"],
+  //"exclude": ["node_modules", "dist"]
+}
