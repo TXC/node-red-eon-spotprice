@@ -1,14 +1,14 @@
-export type EonSpotpriceArea = 'SE1' | 'SE2' | 'SE3' | 'SE4';
+export type EonSpotpriceArea = "SE1" | "SE2" | "SE3" | "SE4";
 
 export type EonSpotpriceAction =
   // Price for today or an override if specified
-  | 'todayOrOverride'
+  | "todayOrOverride"
   // Price for the day ahead
   // @deprecated Use 'todayOrOverride' instead for current day pricing
-  | 'dayAhead'
+  | "dayAhead"
   // Rolling price
   // @deprecated Use 'todayOrOverride' instead for rolling pricing
-  | 'rolling';
+  | "rolling";
 
 export interface EonSpotpriceOptions {
   area: EonSpotpriceArea;
@@ -22,32 +22,32 @@ export interface EonSpotpriceRequestOpts {
 
 export interface EonSpotpriceApiResponse {
   // RFC 3339 string representation of the timestamp
-  dateTime: string
+  dateTime: string;
   // Price excluding VAT in the local currency
-  value: number
+  value: number;
   // Price including VAT in the local currency
-  valueInclVat: number
+  valueInclVat: number;
   // Whether the price is definitive or not
-  definitive: boolean
+  definitive: boolean;
   // Whether the price is padded or not
-  padded: boolean
+  padded: boolean;
 }
 
 export type EonSpotpriceApiResponseArray = EonSpotpriceApiResponse[];
 
 export interface EonSpotpriceOutput {
   // ISO string representation of the timestamp
-  timestamp: string
+  timestamp: string;
   // Price excluding VAT in the local currency
-  priceExclVat: number
+  priceExclVat: number;
   // Price including VAT in the local currency
-  priceInclVat: number
+  priceInclVat: number;
   // Whether the price is definitive or not
-  definitive: boolean
+  definitive: boolean;
   // Whether the price is padded or not
-  padded: boolean
+  padded: boolean;
   // The area for which the price applies
-  area: string
+  area: string;
 }
 
 export type EonSpotpriceOutputArray = EonSpotpriceOutput[];
