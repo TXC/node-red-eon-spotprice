@@ -18,7 +18,7 @@
   ],
   "main": "dist/nodes/eon-spotprice/eon-spotprice.js",
   "types": "dist/nodes/eon-spotprice/eon-spotprice.d.ts",
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.18.0",
   "node-red": {
     "version": ">=1.0.0",
     "nodes": {
