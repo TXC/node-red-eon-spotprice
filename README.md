@@ -1,8 +1,8 @@
 # Node-RED E.ON Spot Price
 
 [![Platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
-[![NPM Total Downloads](https://img.shields.io/npm/dt/node-red-contrib-eon-spotprice.svg)](https://www.npmjs.com/package/node-red-contrib-eon-spotprice)
-[![Dependencies](https://img.shields.io/librariesio/release/npm/node-red-contrib-eon-spotprice.svg)](https://libraries.io/github/TXC/node-red-contrib-eon-spotprice)
+[![NPM Total Downloads](https://img.shields.io/npm/dt/node-red-eon-spotprice.svg)](https://www.npmjs.com/package/node-red-eon-spotprice)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/node-red-eon-spotprice.svg)](https://libraries.io/github/TXC/node-red-eon-spotprice)
 
 A Node-RED node that fetches electricity spot prices for Sweden from E.ON.
 
@@ -14,7 +14,7 @@ A Node-RED node that fetches electricity spot prices for Sweden from E.ON.
 Go to your Node-RED user folder (e.g. `~/.node-red`) and run:
 
 ```sh
-npm i node-red-contrib-eon-spotprice
+npm i node-red-eon-spotprice
 ```
 
 Requires Node.js 22 or newer.

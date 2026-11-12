@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "repository": {
-    "url": "https://github.com/TXC/node-red-contrib-eon-spotprice",
+    "url": "https://github.com/TXC/node-red-eon-spotprice",
     "type": "git"
   },
   "author": {
