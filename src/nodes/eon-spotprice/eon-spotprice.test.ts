@@ -10,8 +10,8 @@ type Flows = Array<FlowsItem>;
 
 const apiEntry = {
   dateTime: "2026-03-15T00:00:00.000+01:00",
-  value: 10.12,
-  valueInclVat: 12.65,
+  value: 247.35,
+  valueInclVat: 305.19,
   definitive: true,
   padded: false,
 };
@@ -88,9 +88,9 @@ describe("eon-spotprice node", () => {
     expect(msg.topic).toBe("prices");
     expect(msg.payload).toEqual([
       {
-        timestamp: apiEntry.dateTime,
-        priceExclVat: 10.12,
-        priceInclVat: 12.65,
+        timestamp: "2026-03-14T23:00:00.000Z",
+        priceExclVat: 2.4735,
+        priceInclVat: 3.0519,
         definitive: true,
         padded: false,
         area: "SE3",
