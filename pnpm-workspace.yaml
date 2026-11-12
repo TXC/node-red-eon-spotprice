@@ -5,7 +5,7 @@ allowBuilds:
 # which pnpm's strict layout doesn't provide. Keep in sync with node-red.
 minimumReleaseAgeExclude:
   - vite-plugin-node-red-node@1.1.0
-  - '@txcswe/vite-plugin-node-red-node@1.1.0'
+  - '@txcswe/vite-plugin-node-red-node@1.0.0 || 1.1.0'
   - glob@14.0.6
   - prettier@3.10.1
 
