@@ -24,14 +24,14 @@ jobs:
       pull-requests: write # comment on pull requests in the release
       id-token: write # npm trusted publishing and provenance
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0 # semantic-release needs the full history and tags
           ssh-key: ${{ secrets.RELEASE_SSH_KEY }}
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6
 
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: 24
           cache: pnpm
@@ -58,7 +58,7 @@ jobs:
 
       - name: Update Node-RED flow library
         if: steps.release.outputs.tag != ''
-        uses: BigThunderSR/update-package-node-red-flow-library-action@v1.3.23
+        uses: BigThunderSR/update-package-node-red-flow-library-action@5f3a1ccb22af3c4da201a3d915e355bbfcad7b4f # v1.3.23
         continue-on-error: true
         with:
           package-name: ${{ steps.release.outputs.package }}
