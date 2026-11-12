@@ -1,0 +1,12 @@
+allowBuilds:
+  '@parcel/watcher': true
+
+# node-red-node-test-helper loads @node-red/registry from next to node-red,
+# which pnpm's strict layout doesn't provide. Keep in sync with node-red.
+minimumReleaseAgeExclude:
+  - vite-plugin-node-red-node@1.1.0
+
+packageExtensions:
+  node-red:
+    dependencies:
+      '@node-red/registry': '5.0.9'

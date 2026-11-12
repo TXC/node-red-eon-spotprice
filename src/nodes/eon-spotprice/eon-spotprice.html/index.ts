@@ -1,5 +1,5 @@
-import { EditorRED } from 'node-red';
-import { EonSpotpriceEditorNodeProperties } from './modules/types';
+import type { EditorRED } from 'node-red';
+import type { EonSpotpriceEditorNodeProperties } from './modules/types';
 
 declare const RED: EditorRED;
 
