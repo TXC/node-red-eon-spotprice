@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/TXC/node-red-eon-spotprice/compare/v1.0.0...v1.0.1) (2026-11-12)
+
+
+### Bug Fixes
+
+* update dependencies ([5c4928e](https://github.com/TXC/node-red-eon-spotprice/commit/5c4928ee9887c81a748cc1ecdb8ded2bb103c65b))
+
 # 1.0.0 (2026-11-12)
 
 

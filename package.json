@@ -1,6 +1,6 @@
 {
   "name": "@txcswe/eon-spotprice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node-Red Node for collecting spotprices from E.ON.",
   "license": "MIT",
   "type": "module",
