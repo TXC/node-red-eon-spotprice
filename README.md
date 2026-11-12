@@ -41,8 +41,8 @@ Actions:
 | Price for tomorrow            | Tomorrow. Ignores `msg.date`.                              |
 | Price for yesterday ... tomorrow | Currently only today's prices. Ignores `msg.date`.      |
 
-Not sure which area you are in? See the
-[Nord Pool map](https://data.nordpoolgroup.com/map).
+Not sure which area you are in? See it on
+[Vilket el­område tillhör du?](https://www.eon.se/el/elpriser/elprisomraden).
 
 ### Input
 

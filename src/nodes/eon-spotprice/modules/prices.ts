@@ -34,9 +34,9 @@ export const prices = async (node: EonSpotpriceNode, opts: EonSpotpriceRequestOp
 
         const items = data.map((entry): EonSpotpriceOutput => {
           return {
-            timestamp: entry.dateTime,
-            priceExclVat: entry.value,
-            priceInclVat: entry.valueInclVat,
+            timestamp: (new Date(entry.dateTime)).toISOString(),
+            priceExclVat: (entry.value / 100),
+            priceInclVat: (entry.valueInclVat / 100),
             definitive: entry.definitive,
             padded: entry.padded,
             area: opts.area

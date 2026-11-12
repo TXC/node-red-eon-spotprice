@@ -1,8 +1,47 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+
+    "allowJs": false,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "outDir": "dist",
     "rootDir": ".",
-    "allowImportingTsExtensions": true
+    "removeComments": true,
+    "noEmit": true,
+    "importHelpers": false,
+    "preserveWatchOutput": true,
+    "checkJs": false,
+
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "verbatimModuleSyntax": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "experimentalDecorators": true,
+    "types": ["node"],
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types",
+    ]
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }

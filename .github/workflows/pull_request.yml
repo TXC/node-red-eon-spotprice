@@ -2,32 +2,54 @@ name: Pull Request
 
 on:
   pull_request:
+    paths:
+      - "**/*.[jt]sx?"  # .js, .ts, .jsx, .tsx
+      - "**/*.[ecm]js"  # .ejs, .cjs, .mjs
+      - "**/*.json"
+      - "**/*.ya?ml"    # .yml, .yaml
   # Also run by release.yml, so a release passes the same checks.
   workflow_call:
 
-permissions:
-  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+  cancel-in-progress: true
 
 jobs:
   test:
-    name: Test (Node ${{ matrix.node-version }})
+    name: Test (Node ${{ matrix.node }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        node-version: [22, 24, 26]
+        node: [22.x, 24.x, 26.x]
     steps:
       - uses: actions/checkout@v7
-
-      # Uses the pnpm version from "packageManager" in package.json.
-      - uses: pnpm/action-setup@v6
-
-      - uses: actions/setup-node@v7
         with:
-          node-version: ${{ matrix.node-version }}
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Set node ${{ matrix.node }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
-      - run: pnpm test
-      - run: pnpm build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: pnpm audit signatures
+
+      - name: Format
+        run: pnpm run format
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Test
+        run: pnpm run test

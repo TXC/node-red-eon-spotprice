@@ -6,16 +6,18 @@ on:
   push:
     branches: [main]
 
-permissions:
-  contents: read
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
   test:
     uses: ./.github/workflows/pull_request.yml
 
   release:
-    needs: test
+    name: Release
     runs-on: ubuntu-latest
+    needs: test
     permissions:
       contents: write # push the release commit and tag, create the release
       issues: write # comment on issues fixed by the release
@@ -33,8 +35,16 @@ jobs:
           node-version: 24
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Semantic Release
+        run: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: pnpm exec semantic-release
         env:
@@ -45,11 +55,13 @@ jobs:
       # semantic-release tags the commit it releases; no tag means no release.
       - name: Check for a new release
         id: release
-        run: echo "tag=$(git tag --points-at HEAD 'v*')" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "tag=$(git tag --points-at HEAD 'v*')" >> "$GITHUB_OUTPUT"
+          echo "package=$(jq -r .name < package.json)" >> "$GITHUB_OUTPUT"
 
       - name: Update Node-RED flow library
         if: steps.release.outputs.tag != ''
         uses: BigThunderSR/update-package-node-red-flow-library-action@v1.3.23
         continue-on-error: true
         with:
-          package-name: node-red-contrib-eon-spotprice
+          package-name: ${{ steps.release.outputs.package }}

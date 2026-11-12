@@ -1,12 +1,14 @@
 <script type="text/html" data-help-name="eon-spotprice">
-    <p>A Node-Red Node for collecting `day ahead` prices from Nord Pool Group.</p>
+    <p>A Node-Red Node for collecting electricity prices from E.ON.</p>
     <h3>Inputs</h3>
     <dl class="message-properties">
         <dt>area
             <span class="property-type">String</span>
         </dt>
         <dd>
-            If set in msg, will accept the area as a string, else the node's settings is used. Possible areas can be found at <a href="https://data.nordpoolgroup.com/map" target="_blank">nordpoolgroup map</a>
+            If set in msg, will accept the area as a string, else the
+            node's settings is used.
+            Possible areas can be found at <a href="https://data.nordpoolgroup.com/map" target="_blank">nordpoolgroup map</a>
             Or the main site <a href="https://www.nordpoolgroup.com/" target="_blank">www.nordpoolgroup.com</a>.
         </dd>
         <dt>date
@@ -18,22 +20,23 @@
         </dd>
     </dl>
     <h3>Output</h3>
-    <p>Returns an array with 192 objects.</p>
+    <p>Returns an array with 96 objects.</p>
     <dl class="message-properties">
-        <dt>dateTime
-            <span class="property-type">dateTime</span>
+        <dt>timestamp
+            <span class="property-type">String</span>
         </dt>
         <dd>
             UTC timestamp when the price starts to take effect.
-            <p><i>A timestamp of 04:00 means this price is valid from 04:00:00 to 04:14:59</i></p>
+            <p><i>A timestamp of 04:00 means this price is valid
+                from 04:00:00.000 to 04:14:59.999</i></p>
         </dd>
-        <dt>value
+        <dt>priceExclVat
             <span class="property-type">Number</span>
         </dt>
         <dd>
             The price pr. kWh and without local taxes.
         </dd>
-        <dt>valueInclVat
+        <dt>priceInclVat
             <span class="property-type">Number</span>
         </dt>
         <dd>
