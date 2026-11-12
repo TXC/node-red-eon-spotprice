@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import { nodeRedBuild } from 'vite-plugin-node-red-node';
+import { nodeRedBuild } from '@txcswe/vite-plugin-node-red-node';
 
 export default defineConfig(opts => ({
   clearScreen: false,
