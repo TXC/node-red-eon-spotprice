@@ -21,7 +21,12 @@
       "dependencies",
       "security"
     ],
-    "groupName": "security"
+    "groupName": "security",
+    "automerge": true,
+    "automergeType": "pr",
+    "automergeSchedule": [
+      "* 0-4 * * *"
+    ]
   },
   "lockFileMaintenance": {
     "description": "Refresh transitive deps in the lockfile once a month.",
@@ -45,8 +50,7 @@
         "pin",
         "digest"
       ],
-      "groupName": "devDependencies",
-      "groupSlug": "dev-dependencies"
+      "groupName": "dev dependencies"
     },
     {
       "description": "ESLint + TypeScript-ESLint toolchain.",
