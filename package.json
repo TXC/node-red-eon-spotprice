@@ -62,7 +62,7 @@
     "@types/node-red-node-test-helper": "^0.3.5",
     "@typescript-eslint/eslint-plugin": "^8.72.2",
     "@typescript-eslint/parser": "^8.72.2",
-    "@txcswe/vite-plugin-node-red-node": "^1.1.0",
+    "@txcswe/vite-plugin-node-red-node": "^1.0.0",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
