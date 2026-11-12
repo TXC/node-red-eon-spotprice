@@ -46,10 +46,6 @@ jobs:
         run: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - run: pnpm exec semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Only needed until npm trusted publishing is set up for the package.
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
