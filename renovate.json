@@ -1,0 +1,103 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 2,
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict",
+  "semanticCommits": "enabled",
+  "labels": [
+    "renovate",
+    "dependencies"
+  ],
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "description": "Security fixes open a PR immediately, ignoring the release-age hold and PR rate limits.",
+    "labels": [
+      "renovate",
+      "dependencies",
+      "security"
+    ],
+    "groupName": "security"
+  },
+  "lockFileMaintenance": {
+    "description": "Refresh transitive deps in the lockfile once a month.",
+    "enabled": true,
+    "schedule": [
+      "before 6am on the first day of the month"
+    ]
+  },
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ],
+  "packageRules": [
+    {
+      "description": "Collapse non-major dev-dependency updates into one rolling PR; a dev major opens on its own unless a family group below (e.g. linting, testing) keeps its toolchain together.",
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "groupName": "devDependencies",
+      "groupSlug": "dev-dependencies"
+    },
+    {
+      "description": "ESLint + TypeScript-ESLint toolchain.",
+      "matchPackageNames": [
+        "eslint",
+        "@eslint/**",
+        "typescript-eslint",
+        "@typescript-eslint/**",
+        "eslint-plugin-**",
+        "eslint-config-prettier",
+        "globals"
+      ],
+      "groupName": "Linting",
+      "groupSlug": "linting"
+    },
+    {
+      "description": "Test toolchain.",
+      "matchPackageNames": [
+        "vitest",
+        "@vitest/**"
+      ],
+      "groupName": "Testing",
+      "groupSlug": "testing"
+    },
+    {
+      "description": "Node-Red toolchain.",
+      "matchPackageNames": [
+        "node-red",
+        "@node-red/**",
+        "@types/node-red**"
+      ],
+      "groupName": "Node-Red",
+      "groupSlug": "node-red"
+    },
+    {
+      "description": "Semantic release toolchain.",
+      "matchPackageNames": [
+        "semantic-release",
+        "@semantic-release/**"
+      ],
+      "groupName": "Semantic Release",
+      "groupSlug": "semantic-release"
+    },
+    {
+      "description": "Collapse all GitHub Actions bumps into a single PR and pin them to commit SHAs.",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "GitHub Actions",
+      "groupSlug": "github-actions",
+      "pinDigests": true
+    }
+  ]
+}
