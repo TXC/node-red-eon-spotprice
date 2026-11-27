@@ -179,7 +179,7 @@ importers:
         version: 10.0.1(eslint@10.14.0(supports-color@8.1.1))
       '@microsoft/api-extractor':
         specifier: ^7.60.1
-        version: 7.60.1(@types/node@26.6.6)
+        version: 7.60.1(@types/node@26.6.7)
       '@semantic-release/changelog':
         specifier: ^7.0.0
         version: 7.0.0(semantic-release@25.0.9(supports-color@8.1.1)(typescript@6.0.3))
@@ -188,10 +188,10 @@ importers:
         version: 11.0.1(semantic-release@25.0.9(supports-color@8.1.1)(typescript@6.0.3))(supports-color@8.1.1)
       '@txcswe/vite-plugin-node-red-node':
         specifier: ^1.0.0
-        version: 1.0.0(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6))(vitest@5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)))
+        version: 1.0.0(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7))(vitest@5.1.0(@types/node@26.6.7)(vite@8.3.8(@types/node@26.6.7)))
       '@types/node':
         specifier: ^26.6.6
-        version: 26.6.6
+        version: 26.6.7
       '@types/node-red':
         specifier: ^1.3.5
         version: 1.3.5
@@ -239,10 +239,10 @@ importers:
         version: 8.72.2(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       vite:
         specifier: ^8.3.8
-        version: 8.3.8(@types/node@26.6.6)
+        version: 8.3.8(@types/node@26.6.7)
       vitest:
         specifier: ^5.0.0
-        version: 5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6))
+        version: 5.1.0(@types/node@26.6.7)(vite@8.3.8(@types/node@26.6.7))
 
 packages:
 
@@ -930,8 +930,8 @@ packages:
   '@types/node-red__util@5.0.1':
     resolution: {integrity: sha512-GbtQYYGklLIRBg0xDAgxyUWPgCfyf40nuGkLfxgFm4tmPN3Fsd8gU+vITIiDEidIZAw4beLsnmwpOm5eFPSfpQ==}
 
-  '@types/node@26.6.6':
-    resolution: {integrity: sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==}
+  '@types/node@26.6.7':
+    resolution: {integrity: sha512-tovuRfrUILu6v46bMG+BgXxMvsqPBx2WO2as8Rpln+JTff1dbexMtAM4KFTejmL0axsnSWViCW7MecUQpLuBRA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3998,23 +3998,23 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@microsoft/api-extractor-model@7.33.16(@types/node@26.6.6)':
+  '@microsoft/api-extractor-model@7.33.16(@types/node@26.6.7)':
     dependencies:
       '@microsoft/tsdoc': 0.17.1
       '@microsoft/tsdoc-config': 0.18.3
-      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.6)
+      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.7)
     transitivePeerDependencies:
       - '@types/node'
 
-  '@microsoft/api-extractor@7.60.1(@types/node@26.6.6)':
+  '@microsoft/api-extractor@7.60.1(@types/node@26.6.7)':
     dependencies:
-      '@microsoft/api-extractor-model': 7.33.16(@types/node@26.6.6)
+      '@microsoft/api-extractor-model': 7.33.16(@types/node@26.6.7)
       '@microsoft/tsdoc': 0.17.1
       '@microsoft/tsdoc-config': 0.18.3
-      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.6)
+      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.7)
       '@rushstack/rig-package': 0.7.4
-      '@rushstack/terminal': 0.24.8(@types/node@26.6.6)
-      '@rushstack/ts-command-line': 5.3.18(@types/node@26.6.6)
+      '@rushstack/terminal': 0.24.8(@types/node@26.6.7)
+      '@rushstack/ts-command-line': 5.3.18(@types/node@26.6.7)
       diff: 8.0.4
       minimatch: 10.2.3
       resolve: 1.22.14
@@ -4365,7 +4365,7 @@ snapshots:
       estree-walker: 2.0.2
       picomatch: 4.0.7
 
-  '@rushstack/node-core-library@5.25.2(@types/node@26.6.6)':
+  '@rushstack/node-core-library@5.25.2(@types/node@26.6.7)':
     dependencies:
       ajv: 8.20.0
       ajv-draft-04: 1.0.0(ajv@8.20.0)
@@ -4376,28 +4376,28 @@ snapshots:
       resolve: 1.22.14
       semver: 7.7.4
     optionalDependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
-  '@rushstack/problem-matcher@0.2.1(@types/node@26.6.6)':
+  '@rushstack/problem-matcher@0.2.1(@types/node@26.6.7)':
     optionalDependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@rushstack/rig-package@0.7.4':
     dependencies:
       jju: 1.4.0
       resolve: 1.22.14
 
-  '@rushstack/terminal@0.24.8(@types/node@26.6.6)':
+  '@rushstack/terminal@0.24.8(@types/node@26.6.7)':
     dependencies:
-      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.6)
-      '@rushstack/problem-matcher': 0.2.1(@types/node@26.6.6)
+      '@rushstack/node-core-library': 5.25.2(@types/node@26.6.7)
+      '@rushstack/problem-matcher': 0.2.1(@types/node@26.6.7)
       supports-color: 8.1.1
     optionalDependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
-  '@rushstack/ts-command-line@5.3.18(@types/node@26.6.6)':
+  '@rushstack/ts-command-line@5.3.18(@types/node@26.6.7)':
     dependencies:
-      '@rushstack/terminal': 0.24.8(@types/node@26.6.6)
+      '@rushstack/terminal': 0.24.8(@types/node@26.6.7)
       '@types/argparse': 1.0.38
       argparse: 1.0.10
       string-argv: 0.3.2
@@ -4536,12 +4536,12 @@ snapshots:
 
   '@sinonjs/text-encoding@0.7.3': {}
 
-  '@txcswe/vite-plugin-node-red-node@1.0.0(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6))(vitest@5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)))':
+  '@txcswe/vite-plugin-node-red-node@1.0.0(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7))(vitest@5.1.0(@types/node@26.6.7)(vite@8.3.8(@types/node@26.6.7)))':
     dependencies:
-      vite-plugin-dts: 5.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6))
+      vite-plugin-dts: 5.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7))
     optionalDependencies:
-      vite: 8.3.8(@types/node@26.6.6)
-      vitest: 5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6))
+      vite: 8.3.8(@types/node@26.6.7)
+      vitest: 5.1.0(@types/node@26.6.7)(vite@8.3.8(@types/node@26.6.7))
     transitivePeerDependencies:
       - '@microsoft/api-extractor'
       - '@rspack/core'
@@ -4564,7 +4564,7 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/chai@5.2.3':
     dependencies:
@@ -4573,13 +4573,13 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/cookiejar@2.1.5': {}
 
   '@types/cors@2.8.19':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/deep-eql@4.0.2': {}
 
@@ -4589,7 +4589,7 @@ snapshots:
 
   '@types/express-serve-static-core@5.1.3':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
       '@types/qs': 6.15.1
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -4658,7 +4658,7 @@ snapshots:
       '@types/node-red__registry': 1.3.12
       '@types/node-red__runtime': 1.3.8
 
-  '@types/node@26.6.6':
+  '@types/node@26.6.7':
     dependencies:
       undici-types: 8.9.0
 
@@ -4674,16 +4674,16 @@ snapshots:
 
   '@types/readable-stream@4.0.25':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/serve-static@2.2.0':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@types/sinon@22.0.2':
     dependencies:
@@ -4693,7 +4693,7 @@ snapshots:
     dependencies:
       '@types/cookiejar': 2.1.5
       '@types/methods': 1.1.4
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
       form-data: 4.0.6
 
   '@types/supertest@7.2.1':
@@ -4703,7 +4703,7 @@ snapshots:
 
   '@types/ws@8.18.2':
     dependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
 
   '@typescript-eslint/eslint-plugin@8.72.2(@typescript-eslint/parser@8.72.2(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
@@ -4796,14 +4796,14 @@ snapshots:
       '@typescript-eslint/types': 8.72.2
       eslint-visitor-keys: 5.0.1
 
-  '@vitest/mocker@5.1.0(vite@8.3.8(@types/node@26.6.6))':
+  '@vitest/mocker@5.1.0(vite@8.3.8(@types/node@26.6.7))':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@vitest/spy': 5.1.0
       estree-walker: 3.0.3
       magic-string: 1.4.5
     optionalDependencies:
-      vite: 8.3.8(@types/node@26.6.6)
+      vite: 8.3.8(@types/node@26.6.7)
 
   '@vitest/spy@5.1.0': {}
 
@@ -7242,7 +7242,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-dts@1.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6)):
+  unplugin-dts@1.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7)):
     dependencies:
       '@rollup/pluginutils': 5.5.1
       '@volar/typescript': 2.4.31(typescript@6.0.3)
@@ -7255,9 +7255,9 @@ snapshots:
       typescript: 6.0.3
       unplugin: 2.3.11
     optionalDependencies:
-      '@microsoft/api-extractor': 7.60.1(@types/node@26.6.6)
+      '@microsoft/api-extractor': 7.60.1(@types/node@26.6.7)
       rolldown: 1.2.19
-      vite: 8.3.8(@types/node@26.6.6)
+      vite: 8.3.8(@types/node@26.6.7)
     transitivePeerDependencies:
       - supports-color
 
@@ -7287,12 +7287,12 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-dts@5.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6)):
+  vite-plugin-dts@5.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7)):
     dependencies:
-      unplugin-dts: 1.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.6))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.6))
+      unplugin-dts: 1.1.2(@microsoft/api-extractor@7.60.1(@types/node@26.6.7))(rolldown@1.2.19)(supports-color@8.1.1)(typescript@6.0.3)(vite@8.3.8(@types/node@26.6.7))
     optionalDependencies:
-      '@microsoft/api-extractor': 7.60.1(@types/node@26.6.6)
-      vite: 8.3.8(@types/node@26.6.6)
+      '@microsoft/api-extractor': 7.60.1(@types/node@26.6.7)
+      vite: 8.3.8(@types/node@26.6.7)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -7302,7 +7302,7 @@ snapshots:
       - typescript
       - webpack
 
-  vite@8.3.8(@types/node@26.6.6):
+  vite@8.3.8(@types/node@26.6.7):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -7310,13 +7310,13 @@ snapshots:
       rolldown: 1.2.19
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
       fsevents: 2.3.3
 
-  vitest@5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)):
+  vitest@5.1.0(@types/node@26.6.7)(vite@8.3.8(@types/node@26.6.7)):
     dependencies:
       '@types/chai': 5.2.3
-      '@vitest/mocker': 5.1.0(vite@8.3.8(@types/node@26.6.6))
+      '@vitest/mocker': 5.1.0(vite@8.3.8(@types/node@26.6.7))
       chai: 6.3.0
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
@@ -7327,10 +7327,10 @@ snapshots:
       tinybench: 6.2.3
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      vite: 8.3.8(@types/node@26.6.6)
+      vite: 8.3.8(@types/node@26.6.7)
       why-is-node-running: 3.2.1
     optionalDependencies:
-      '@types/node': 26.6.6
+      '@types/node': 26.6.7
     transitivePeerDependencies:
       - msw
 
